@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//www.fontstatic.com/f=ge-ss" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/base.min.css">
+  </head>
+  <body class="page-brand">
+    <script id='template' type='text/ractive'>
+    <main class="content">
+    <div class="content-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-sm-12">
+            <h1 class="content-heading">Zain Cash Store</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-3">
+          <div class="card">
+            <div class="card-main">
+              <div class="card-img">
+                <img alt="alt text" src="/styles/images/iphone.jpg" style="width: 100%;">
+                <p class="card-img-heading">Apple iPhone 6p</p>
+              </div>
+              <div class="card-action">
+                <div class="card-action-btn pull-left">
+                  <a on-click="addIphone" id="iphone" class="btn btn-flat waves-attach waves-effect" href="javascript:void(0)">
+                  <i class="fa fa-shopping-cart"></i>&nbsp;Add To Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+          <div class="card">
+            <div class="card-main">
+              <div class="card-img">
+                <img alt="alt text" src="/styles/images/galazys7.jpg" style="width: 100%;">
+                <p class="card-img-heading">Galaxy s7</p>
+              </div>
+              <div class="card-action">
+                <div class="card-action-btn pull-left">
+                  <a on-click="addGalaxy" id="galaxy" class="btn btn-flat waves-attach waves-effect" href="javascript:void(0)">
+                  <i class="fa fa-shopping-cart"></i>&nbsp;Add To Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+          <div class="card">
+            <div class="card-main">
+              <div class="card-img">
+                <img alt="alt text" src="styles/images/motox.jpg" style="width: 100%;">
+                <p class="card-img-heading">Moto X 360</p>
+              </div>
+              <div class="card-action">
+                <div class="card-action-btn pull-left">
+                  <a on-click="addMoto" class="btn btn-flat waves-attach waves-effect" href="javascript:void(0)">
+                  <i class="fa fa-shopping-cart"></i>&nbsp;Add To Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-3">
+          <div class="card">
+            <div class="card-main">
+              <div class="card-img">
+                <img alt="alt text" src="styles/images/adidas.jpg" style="width: 100%;">
+                <p class="card-img-heading">Adidas Shoe</p>
+              </div>
+              <div class="card-action">
+                <div class="card-action-btn pull-left">
+                  <a on-click="addAdidas" class="btn btn-flat waves-attach waves-effect" href="javascript:void(0)">
+                  <i class="fa fa-shopping-cart"></i>&nbsp;Add To Cart</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-sm-12">
+        <h3>cart</h3>
+          <div class="table-responsive">
+            <table class="table" title="A basic table">
+              <thead>
+                <tr>
+                  <th>Item</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+              {{#cart}}
+                <tr>
+                  <td>{{item}}</td>
+                  <td>{{price}}</td>
+                </tr>
+              {{/cart}}
+              </tbody>
+            </table>
+          </div>
+          <a class="btn btn-brand">Checkout with Zain Cash</a>
+        </div>
+      </div>
+    </div>
+
+    </main>
+    </script>
+    <div id='container'></div>
+    <!-- js -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="js/base.min.js"></script>
+    <!-- js for doc -->
+    <script src="js/dependencies/ractive.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
