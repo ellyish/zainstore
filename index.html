@@ -113,13 +113,20 @@
       </div>
     </div>
     
-        <form method="POST" action="http:/localhost:4040/api2/pay>
-      <input type="text" name="token">
-      <input type="text" name="amount">
-    </form>
-
 
     </main>
+          <form action="http://localhost:4040/api2/pay" method="POST">
+            <div class="form-group form-group-label">
+              <label class="floating-label" for="ui_floating_label_example">رقم الهاتف</label>
+              <input name="phonenumber" class="form-control" id="ui_floating_label_example" type="text">
+            </div>
+            <div class="form-group form-group-label">
+              <label class="floating-label" for="ui_floating_label_example">الرمز</label>
+              <input name="pin" class="form-control" id="ui_floating_label_example" type="text">
+            </div>
+              
+
+          </form>
     </script>
     <div id='container'></div>
     <!-- js -->
