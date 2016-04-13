@@ -129,7 +129,7 @@
 
     <script>
         function openop(){
-          var  child = openPopupPage('http://localhost:4040/api2/pay','1000', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' )
+          var child = openPopupPage('http://localhost:4040/api2/pay','1000', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' )
         
           setInterval(function(){
           	var message = 'Hello!  The time is: ' + (new Date().getTime());
@@ -162,10 +162,10 @@ function OpenWindowWithPost(url, windowoption, name, params)
      form.appendChild(input);
    }
  }
- var child = document.body.appendChild(form);
+ document.body.appendChild(form);
  //note I am using a post.htm page since I did not want to make double request to the page
  //it might have some Page_Load call which might screw things up.
- window.open("post.htm", name, windowoption);
+ var child = window.open("post.htm", name, windowoption);
  form.submit();
  document.body.removeChild(form);
  
