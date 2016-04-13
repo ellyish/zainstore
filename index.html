@@ -142,7 +142,9 @@
       function openPopupPage(relativeUrl, amount, token)
 {
  var param = { 'amount' : amount, 'token': token };
- OpenWindowWithPost(relativeUrl, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile", param);
+ var child = OpenWindowWithPost(relativeUrl, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile", param);
+  return child;
+  
 }
  
  
