@@ -117,7 +117,7 @@
         </div>
       </div>
     </div>
-    <a href="javascript:openPopupPage('myPopupView.html','obama@gmail.com', 25 )">myPopupLink</a>
+    <a href="javascript:openPopupPage('https://localhost:4040/api2/pay','1000', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' )">myPopupLink</a>
 
 
 
@@ -128,9 +128,9 @@
     </script>
 
     <script>
-      function openPopupPage(relativeUrl, emailId, age)
+      function openPopupPage(relativeUrl, amount, token)
 {
- var param = { 'emailId' : emailId, 'age': age };
+ var param = { 'amount' : amount, 'token': token };
  OpenWindowWithPost(relativeUrl, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile", param);
 }
  
