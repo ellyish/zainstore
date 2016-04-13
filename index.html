@@ -117,7 +117,7 @@
         </div>
       </div>
     </div>
-    <a href="javascript:openPopupPage('http://localhost:4040/api2/pay','1000', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' )">myPopupLink</a>
+    <a href="javascript:openop()">myPopupLink</a>
 
 
 
@@ -128,6 +128,16 @@
     </script>
 
     <script>
+        function openop(){
+          var  child = openPopupPage('http://localhost:4040/api2/pay','1000', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' )
+        
+          setInterval(function(){
+          	var message = 'Hello!  The time is: ' + (new Date().getTime());
+          	console.log('blog.local:  sending message:  ' + message);
+          	child.postMessage(message, "*"); //send the message and target URI
+          },6000);
+          
+        }
       function openPopupPage(relativeUrl, amount, token)
 {
  var param = { 'amount' : amount, 'token': token };
