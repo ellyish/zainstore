@@ -152,12 +152,14 @@ function OpenWindowWithPost(url, windowoption, name, params)
      form.appendChild(input);
    }
  }
- document.body.appendChild(form);
+ var child = document.body.appendChild(form);
  //note I am using a post.htm page since I did not want to make double request to the page
  //it might have some Page_Load call which might screw things up.
  window.open("post.htm", name, windowoption);
  form.submit();
  document.body.removeChild(form);
+ 
+ return child;
 }
 
 function receiveMessage(event)
