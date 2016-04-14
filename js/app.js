@@ -14,17 +14,17 @@
 
 
     ractive.on('addMoto', function (ctx) {
-        cart.push({item: "Moto X 360 Black", price: "200$"})
+        cart.push({item: "Moto X 360 Black", price: 1000})
     })
 
     ractive.on('addGalaxy', function (ctx) {
-        cart.push({item: "Galaxy s7", price: "600$"})
+        cart.push({item: "Galaxy s7", price: 1000})
     })
 
     ractive.on('addIphone', function (ctx) {
-        cart.push({item: "Apple iPhone 6p", price: "720$"})
+        cart.push({item: "Apple iPhone 6p", price: 1000})
     })
 
     ractive.on('addAdidas', function (ctx) {
-        cart.push({item: "Adidas Shoes", price: "120$"})
+        cart.push({item: "Adidas Shoes", price: 1000})
     })
