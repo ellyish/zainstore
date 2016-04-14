@@ -127,67 +127,6 @@
       
     </script>
 
-    <script>
-        function openop(){
-          var child = openPopupPage('http://localhost:4040/api2/pay','1000', 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855' )
-          console.log(child)
-          setInterval(function(){
-          	var message = 'Hello!  The time is: ' + (new Date().getTime());
-          	console.log('blog.local:  sending message:  ' + message);
-          	console.log(child)
-          	child.postMessage(message, "*"); //send the message and target URI
-          },6000);
-          
-        }
-      function openPopupPage(relativeUrl, amount, token)
-{
- var param = { 'amount' : amount, 'token': token };
- var child = OpenWindowWithPost(relativeUrl, "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes", "NewFile", param);
-  return child;
-  
-}
- 
- 
-function OpenWindowWithPost(url, windowoption, name, params)
-{
- var form = document.createElement("form");
- form.setAttribute("method", "post");
- form.setAttribute("action", url);
- form.setAttribute("target", name);
- for (var i in params)
- {
-   if (params.hasOwnProperty(i))
-   {
-     var input = document.createElement('input');
-     input.type = 'hidden';
-     input.name = i;
-     input.value = params[i];
-     form.appendChild(input);
-   }
- }
- document.body.appendChild(form);
- //note I am using a post.htm page since I did not want to make double request to the page
- //it might have some Page_Load call which might screw things up.
- var child = window.open("post.htm", name, windowoption);
- form.submit();
- document.body.removeChild(form);
- 
- return child;
-}
-
-function receiveMessage(event)
-{
-  // Do we trust the sender of this message?  (might be
-  // different from what we originally opened, for example).
-  //if (event.origin !== "http://example.org")
-    //return;
-  console.log(event)
-  // event.source is popup
-  // event.data is "hi there yourself!  the secret response is: rheeeeet!"
-}
-window.addEventListener("message", receiveMessage, false);
-
-    </script>
   
     <div id='container'></div>
     <!-- js -->
