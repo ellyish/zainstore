@@ -49,7 +49,7 @@ Array.prototype.sum = function (prop) {
 
         var form = document.createElement("form");
         form.setAttribute("method", "post");
-        form.setAttribute("action", "http://6eda119b.ngrok.io/pay");
+        form.setAttribute("action", "http://f8c686f6.ngrok.io/pay");
         form.setAttribute("target", "NewFile");
         for (var i in params) {
             if (params.hasOwnProperty(i)) {
