@@ -130,7 +130,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="js/base.min.js"></script>
     <script src="http://localhost:3000/js/zaincashc.js"></script>
+    <script>
+      listenToMessages = function (event) {
+        // Do we trust the sender of this message?  (might be
+        // different from what we originally opened, for example).
+        //if (event.origin !== "http://example.org")
+        //return;
+        console.log(event)
+        // event.source is popup
+        // event.data is "hi there yourself!  the secret response is: rheeeeet!"
 
+}
+
+window.addEventListener("message", listenToMessages, false);
+
+
+
+
+    </script>
     <!-- js for doc -->
     <script src="js/dependencies/ractive.js"></script>
     <script src="js/app.js"></script>
