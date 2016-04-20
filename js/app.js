@@ -50,7 +50,7 @@ Array.prototype.sum = function (prop) {
 
         var form = document.createElement("form");
         form.setAttribute("method", "post");
-        form.setAttribute("action", "http://localhost:3000/processing");
+        form.setAttribute("action", "http://localhost:3000/pay");
         form.setAttribute("target", "NewFile");
         for (var i in params) {
             if (params.hasOwnProperty(i)) {
