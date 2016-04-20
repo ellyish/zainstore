@@ -39,7 +39,7 @@ Array.prototype.sum = function (prop) {
 
     ractive.on('checkout', function (){
         
-        openWindow({token: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+        openWindow({token: '8c246f1baec3094ad95b361a7610b3992f658b28672deef79a42df1efdb28261',
             amount: cart.sum("price")
         })
         
@@ -49,7 +49,7 @@ Array.prototype.sum = function (prop) {
 
         var form = document.createElement("form");
         form.setAttribute("method", "post");
-        form.setAttribute("action", "https://api.zaincash.iq/pay");
+        form.setAttribute("action", "http://localhost:3000/pay");
         form.setAttribute("target", "NewFile");
         for (var i in params) {
             if (params.hasOwnProperty(i)) {
