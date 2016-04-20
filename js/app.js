@@ -66,7 +66,7 @@ Array.prototype.sum = function (prop) {
         document.body.appendChild(form);
         //note I am using a post.htm page since I did not want to make double request to the page
         //it might have some Page_Load call which might screw things up.
-        window.open("post.htm", "NewFile", "width=1000, height=600, left=100, top=100, resizable=yes, scrollbars=yes");
+        window.open("post.htm", "NewFile", "width=1000, height=600, modal=yes, left=100, top=100, resizable=yes, scrollbars=yes");
         form.submit();
 
         document.body.removeChild(form);
