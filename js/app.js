@@ -41,7 +41,7 @@ Array.prototype.sum = function (prop) {
         
         openWindow({token: '8c246f1baec3094ad95b361a7610b3992f658b28672deef79a42df1efdb28261',
             amount: cart.sum("price"),
-            lang: "en"
+            lang: "ar"
         })
         
     })
