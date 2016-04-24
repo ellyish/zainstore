@@ -39,7 +39,7 @@ Array.prototype.sum = function (prop) {
 
     ractive.on('checkout', function (){
         
-        openWindow({token: 'e9d7bbd6bf5463e475066046eb3e32f9c4325ac86fce705aeb77427c3d346165',
+        openWindow({token: '44e6a53016fe73282d6995cc03efea1386c5f961cd1f33bab848f1e86174cf88',
             amount: cart.sum("price"),
             lang: 'en'
         })
