@@ -7,6 +7,37 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <!--STYLES-->
     <link rel="stylesheet" href="styles/base.min.css">
+      <style>
+    button {
+    background: #191817; /* Old browsers */
+
+      border-radius:30px;
+      border: none;
+      outline: none;
+      padding-right: 20px;
+      padding-left: 20px;
+      padding-top: 10px;
+      padding-bottom: 10px; 
+    }
+
+    button:hover{
+      background: #333231;
+      transition: all 0.2s;
+      color: #fff;
+      border-radius:30px;
+      border: none;
+      outline: none;
+    }
+
+
+    button > img {
+      width: 160px;
+
+    }
+
+
+  </style>
+
   </head>
   <body class="page-brand">
     <script id='template' type='text/ractive'>
@@ -109,9 +140,10 @@
             </table>
           </div>
           
-          <div id="cash">
-            <a on-click="checkout" class="btn btn-brand">checkOut With Zain Cash</a>
-          </div>
+            <button on-click="checkout" onclick="javascript: alert('hello')">
+                <img  style="vertical-align:middle" src="zaincash.png">
+            </button>
+
         </div>
       </div>
     </div>
